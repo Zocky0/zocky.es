@@ -1,11 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zocky</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(270deg, #7f00ff, #e100ff, #00c6ff);
+      background-size: 600% 600%;
+      animation: gradientMove 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      text-align: center;
+      backdrop-filter: blur(20px);
+      padding: 60px 80px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .title img {
+      width: 110px;
+      height: 110px;
+      object-fit: contain;
+      display: block;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 35px;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .socials a {
+      font-size: 1.9rem;
+      color: white;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      opacity: 0.9;
+    }
+
+    .socials a:hover {
+      transform: scale(1.25);
+      opacity: 1;
+    }
+
+    .coming-soon {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+      padding: 12px 25px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      opacity: 0.9;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
 </head>
 <body>
-  <h1>Zocky</h1>
-  <p>Web en construcción 🔥</p>
+  <div class="container">
+    <div class="title">
+      <img src="logo zocky.png" alt="Logo">
+      <h1>Zocky</h1>
+    </div>
+    <p>Diseñador gráfico y creador digital</p>
+    <div class="socials">
+      <a href="https://discord.com/users/1179427245048221710" target="_blank" aria-label="Discord">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://x.com/Zockyy_" target="_blank" aria-label="X">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="coming-soon">
+    Esta web sigue en proceso de creación y pronto se actualizará de nuevo.
+  </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
