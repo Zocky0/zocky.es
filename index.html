@@ -228,12 +228,13 @@
   </div>
 
   <script>
-    fetch("https://ipapi.co/json/")
+    // API alternativa que funciona desde GitHub Pages
+    fetch("https://ipwhois.app/json/")
       .then(res => res.json())
       .then(data => {
         document.getElementById("ip").textContent = data.ip;
         document.getElementById("location").textContent =
-          `${data.city}, ${data.region}, ${data.country_name}`;
+          `${data.city}, ${data.region}, ${data.country}`;
       })
       .catch(() => {
         document.getElementById("ip").textContent = "No disponible";
@@ -243,4 +244,5 @@
 
 </body>
 </html>
+
 
