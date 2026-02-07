@@ -28,8 +28,6 @@
       background: linear-gradient(270deg, #7a2cff, #b84dff, #5a8dff, #9b4dff);
       background-size: 600% 600%;
       animation: gradientMove 20s ease infinite;
-      display: grid;
-      place-items: center; /* CENTRADO PERFECTO */
       overflow: hidden;
       position: relative;
     }
@@ -79,7 +77,12 @@
       50% { transform: translateY(-40px) translateX(30px); }
     }
 
+    /* CENTRADO FIJO GARANTIZADO */
     .container {
+      position: fixed; /* fijado en el viewport */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
       padding: 65px 90px;
       border-radius: 26px;
@@ -238,6 +241,7 @@
   </div>
 
   <script>
+    // API IP/ubicación confiable en GitHub Pages
     fetch("https://ipwhois.app/json/")
       .then(res => res.json())
       .then(data => {
@@ -253,6 +257,7 @@
 
 </body>
 </html>
+
 
 
 
