@@ -9,23 +9,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    /* RESET */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;                 /* garantiza centrado en GitHub Pages */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       color: white;
       background: linear-gradient(270deg, #7a2cff, #b84dff, #5a8dff, #9b4dff);
       background-size: 600% 600%;
       animation: gradientMove 20s ease infinite;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       position: relative;
     }
 
@@ -98,6 +104,7 @@
       width: 120px;
       height: 120px;
       object-fit: contain;
+      display: block;  /* evita problemas de alineación */
     }
 
     .title h1 {
@@ -130,10 +137,11 @@
       opacity: 1;
     }
 
+    /* INFO CENTRADO */
     .info {
-      text-align: center;         /* centra todo el contenido */
-      max-width: 700px;           /* ancho máximo para que no se desplace */
-      margin: 0 auto 35px;        /* centrado horizontal y margen inferior */
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 35px;
     }
 
     .info h2 {
@@ -144,7 +152,7 @@
 
     .info-boxes {
       display: flex;
-      justify-content: center;    /* centra los info-boxes */
+      justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
       margin-top: 10px;
@@ -227,7 +235,6 @@
       </div>
     </div>
 
-    <!-- MENSAJITO -->
     <div class="footer-note">
       Esta web se volverá a actualizar próximamente
     </div>
@@ -235,7 +242,7 @@
   </div>
 
   <script>
-    // API alternativa que funciona desde GitHub Pages
+    // API de IP/ubicación que funciona desde GitHub Pages
     fetch("https://ipwhois.app/json/")
       .then(res => res.json())
       .then(data => {
@@ -251,6 +258,7 @@
 
 </body>
 </html>
+
 
 
 
